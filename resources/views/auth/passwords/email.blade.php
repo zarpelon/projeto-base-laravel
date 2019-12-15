@@ -2,6 +2,13 @@
 @section('content')
 <div class="row justify-content-center">
     <div class="col-md-8">
+
+    @if (isset($errors))
+    <div class="alert alert-danger alert-block">
+        <button type="button" class="close" data-dismiss="alert">×</button>    
+        <strong>E-mail não encontrado</strong>
+    </div>
+    @endif
         <div class="card-group">
             <div class="card p-4">
                 <div class="card-body">
