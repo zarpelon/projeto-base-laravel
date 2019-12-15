@@ -6,10 +6,14 @@ Projeto em Laravel 6, utilizando CoreUI para o teste de desenvolvedor PHP na Dit
 
 - Painel admnistrativo baseado no [CoreUI theme](https://coreui.io/) 
 - Gerenciamento de Usuários, Regras e Permissões
+- Suporte a multi-idiomas
 - CRUD de Salas
 - Gerenciamento de Reserva de Salas por usuário
+- Possibilidade de exportar os dados para CSV, PDF, Excel.
+- Pesquisa, paginação, filtros. 
 - API disponível em http://__seu_endereco__/api/v1/users
 - Recursos disponíveis *users* *rooms* *bookings* *permissions* *roles*
+- Script sql __etapa2.sql__ contendo a query solicitada
 
 ## Como Instalar
 

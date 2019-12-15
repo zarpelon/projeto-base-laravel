@@ -1,3 +1,4 @@
+
 <?php
 
 return [
@@ -48,6 +49,7 @@ return [
     'dashboard'                            => 'Painel',
     'back_dashboard'                       => 'Voltar ao Painel',
     'save_success'                         => 'Registro salvo com sucesso!',
+    'save_error'                           => 'Por favor verifique os erros listados abaixo', 
     'datatables'                           => [
         'copy'          => 'Copiar',
         'csv'           => 'CSV',

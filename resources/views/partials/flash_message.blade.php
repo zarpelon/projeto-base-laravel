@@ -29,6 +29,6 @@
 @if ($errors->any())
 <div class="alert alert-danger">
     <button type="button" class="close" data-dismiss="alert">×</button>    
-    Por favor verifique os erros listados abaixo
+    {{ trans('global.save_error') }}
 </div>
 @endif

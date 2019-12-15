@@ -53,7 +53,7 @@ class BookingsController extends Controller
     {
         abort_unless(\Gate::allows('booking_edit'), 403);
 
-        return view('admin.bookings.edit', compact('booking'));
+        return view('admin.bookings.edit', ['booking' => $booking, 'rooms' => Room::all()]);
     }
 
     public function update(UpdateBookingRequest $request, Booking $booking)
@@ -86,5 +86,11 @@ class BookingsController extends Controller
         Booking::whereIn('id', request('ids'))->delete();
 
         return response(null, 204);
+    }
+
+    public function verifyRoom($room_id) {
+        $bookings = Booking::all();
+
+        return view('admin.bookings.verify_room', ['bookings' => $bookings]);
     }
 }

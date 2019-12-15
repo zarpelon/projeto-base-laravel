@@ -23,4 +23,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
     Route::delete('bookings/destroy', 'BookingsController@massDestroy')->name('bookings.massDestroy');
     Route::resource('bookings', 'BookingsController');
+
+    Route::get('bookings/verifyRoom/{room_id?}', 'BookingsController@verifyRoom')->name('bookings.verifyRoom');
 });

@@ -30,11 +30,20 @@
                         @endforeach
                     </select>
                 </div>  
+
                 @if($errors->has('room_id'))
                     <em class="invalid-feedback">
                         {{ $errors->first('room_id') }}
                     </em>
                 @endif
+
+            <!-- Botão para acionar modal -->
+            <a href="{{ route('admin.bookings.verifyRoom', ['room_id' => '1']) }}" 
+                data-endpoint="{{ route('admin.bookings.verifyRoom', ['room_id' => '1']) }}" 
+                data-toggle="modal" 
+                data-target="#modalExemplo"
+                data-cache="false",
+                data-async="true">Verificar Reservas das Salas</a>
             </div>
 
             <div class="form-group">
@@ -61,21 +70,50 @@
         </form>
     </div>
 </div>
+
+<!-- Modal de Disponibilidade -->
+<div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Datas Reservadas das Salas</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id='result'>
+
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
 @endsection
 
 @section('scripts')
 <script>
 
-$('#from_date').datepicker({
-    dateFormat: 'dd/mm/yy',
-    changeMonth: true,
-    changeYear: true,
-    firstDay: 1,
-    onSelect: function () {
-        $('#edate').val(this.value);
-    }
+$('a[data-async="true"]').click(function(e){
+    e.preventDefault();
+    var self = $(this),
+        url = self.data('endpoint'),
+        target = self.data('target'),
+        cache = self.data('cache');
+
+    $.ajax({
+        url: url,
+        cache : cache,
+        success: function(data){ 
+           if (target !== 'undefined'){
+                $('#result').html(data);
+            }
+        }
+    });
 });
-
-
 </script>
 @endsection
