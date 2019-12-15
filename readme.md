@@ -14,13 +14,13 @@ Projeto em Laravel 6, utilizando CoreUI para o teste de desenvolvedor PHP na Dit
 - Envio de e-mail para novos usuários, alteração de senha.
 - API disponível em http://__seu_endereco__/api/v1/users
 - Recursos disponíveis *users* *rooms* *bookings* *permissions* *roles*
-- Dump iniciail conforme solicitado em dump/init.sql
+- Dump inicial conforme solicitado em dump/init.sql
 - Script sql __etapa2.sql__ contendo a query solicitada
 
 ## Como Instalar
 
 - Clonar esse repositório com __git clone__
-- Faça uma cópia de __.env.example__ para __.env__ and edite as credenciais da sua base de dados
+- Faça uma cópia de __.env.example__ para __.env__ então edite as credenciais da sua base de dados
 - Execute o comando __composer install__
 - Execute o comando __php artisan key:generate__
 - Execute o comando __php artisan migrate --seed__ (irá popular com alguns dados pré-definidos)
