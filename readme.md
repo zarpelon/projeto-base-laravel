@@ -4,10 +4,12 @@ Projeto em Laravel 6, utilizando CoreUI para o teste de desenvolvedor PHP na Dit
 
 ## O que contém
 
-- Painel admnistrativo baseado no [CoreUI theme](https://coreui.io/): com um usuário padrão "admin" (_admin@admin.com / ditechguy) 
+- Painel admnistrativo baseado no [CoreUI theme](https://coreui.io/) 
 - Gerenciamento de Usuários, Regras e Permissões
 - CRUD de Salas
 - Gerenciamento de Reserva de Salas por usuário
+- API disponível em http://__seu_endereco__/api/v1/users
+- Recursos disponíveis *users* *rooms* *bookings* *permissions* *roles*
 
 ## Como Instalar
 
