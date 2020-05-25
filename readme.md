@@ -1,6 +1,6 @@
 # Ditech - Reserva de Salas
 
-Projeto em Laravel 6, utilizando CoreUI para o teste de desenvolvedor PHP na Diteh. 
+Projeto em Laravel 6, utilizando Laravel 6 e CoreUI. 
 
 ## O que contém
 
