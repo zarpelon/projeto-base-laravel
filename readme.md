@@ -1,4 +1,4 @@
-# Ditech - Reserva de Salas
+# [Projeto Base - Exemplo] Reserva de Salas
 
 Projeto em Laravel 6, utilizando Laravel 6 e CoreUI. 
 
@@ -15,7 +15,6 @@ Projeto em Laravel 6, utilizando Laravel 6 e CoreUI.
 - API disponível em http://__seu_endereco__/api/v1/users
 - Recursos disponíveis *users* *rooms* *bookings* *permissions* *roles*
 - Dump inicial conforme solicitado em dump/init.sql
-- Script sql __etapa2.sql__ contendo a query solicitada
 
 ## Como Instalar
 
